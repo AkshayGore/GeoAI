@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshay Gore - Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -13,11 +14,24 @@
             color: #343a40; /* Dark text */
         }
         .header-bg {
-            background: linear-gradient(to right, #007bff, #0056b3); /* Blue gradient */
+            /* Using a placeholder GIS map image for the background */
+            background: url('https://via.placeholder.com/1500x500/007bff/ffffff?text=GIS+Map+Background') no-repeat center center/cover;
             color: #fff;
             padding-top: 60px;
             padding-bottom: 40px;
             border-bottom: 5px solid #28a745; /* Green accent */
+            position: relative;
+            z-index: 1; /* Ensure text is above background */
+        }
+        .header-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+            z-index: -1;
         }
         .header-bg h1 {
             font-size: 3.5rem;
@@ -67,6 +81,10 @@
             color: #fff;
             padding: 30px 0;
             margin-top: 50px;
+        }
+        .list-group-item i {
+            margin-right: 10px;
+            color: #007bff; /* Icon color */
         }
 
         /* Animations */
@@ -160,10 +178,10 @@
                     <div class="card p-4 h-100">
                         <h3 class="text-primary">GIS Software & Data Management</h3>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Geoserver 2.27 customization, scalable and reliable deployment</li>
-                            <li class="list-group-item">SQL Server and PostgreSQL/PostGIS Server</li>
-                            <li class="list-group-item">QGIS, ArcGIS 10.4, Erdas Imagine 2020, (Modelling and Spatial Analysts)</li>
-                            <li class="list-group-item">ERDAS 2015, ENVI 5.2 (Image processing and analysis tools)</li>
+                            <li class="list-group-item"><i class="fas fa-server"></i> Geoserver 2.27 customization, scalable and reliable deployment</li>
+                            <li class="list-group-item"><i class="fas fa-database"></i> SQL Server and PostgreSQL/PostGIS Server</li>
+                            <li class="list-group-item"><i class="fas fa-map"></i> QGIS, ArcGIS 10.4, Erdas Imagine 2020, (Modelling and Spatial Analysts)</li>
+                            <li class="list-group-item"><i class="fas fa-image"></i> ERDAS 2015, ENVI 5.2 (Image processing and analysis tools)</li>
                         </ul>
                     </div>
                 </div>
@@ -171,11 +189,11 @@
                     <div class="card p-4 h-100">
                         <h3 class="text-primary">Web User Language & Frameworks</h3>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">AI Retrieval-Augmented Generation (RAG) agent for Spatial Data</li>
-                            <li class="list-group-item">NodeJs 20, Python 3.12, jQuery Ajax, JavaScript, HTML, CSS</li>
-                            <li class="list-group-item">ESRI JavaScript 4.33, Openlayer.js 10, Leaflet 2.0, Leaflet JavaScript</li>
-                            <li class="list-group-item">Cesium JS opensource for Web GIS</li>
-                            <li class="list-group-item">SQL Spatial and Non-Spatial query and Stored procedure</li>
+                            <li class="list-group-item"><i class="fas fa-robot"></i> AI Retrieval-Augmented Generation (RAG) agent for Spatial Data</li>
+                            <li class="list-group-item"><i class="fab fa-node-js"></i> NodeJs 20, <i class="fab fa-python"></i> Python 3.12, jQuery Ajax, <i class="fab fa-js"></i> JavaScript, <i class="fab fa-html5"></i> HTML, <i class="fab fa-css3-alt"></i> CSS</li>
+                            <li class="list-group-item"><i class="fas fa-map-marked-alt"></i> ESRI JavaScript 4.33, Openlayer.js 10, Leaflet 2.0, Leaflet JavaScript</li>
+                            <li class="list-group-item"><i class="fas fa-globe"></i> Cesium JS opensource for Web GIS</li>
+                            <li class="list-group-item"><i class="fas fa-file-code"></i> SQL Spatial and Non-Spatial query and Stored procedure</li>
                         </ul>
                     </div>
                 </div>
